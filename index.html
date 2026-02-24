@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Warta Jemaat</title>
-<link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Warta Jemaat</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e3a8a">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>
-  Gereja Toraja<br>
-  <small>Jemaat Juata – Tarakan</small>
-</h2>
+  <h2>
+    Gereja Toraja<br>
+    <small>Jemaat Juata – Tarakan</small>
+  </h2>
 
-<div id="app">Memuat…</div>
+  <div id="app">Memuat…</div>
 
-<script src="app.js"></script>
+  <!-- Script -->
+  <script src="app.js"></script>
+
+  <!-- Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+
 </body>
 </html>
