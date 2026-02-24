@@ -1,2 +1,3 @@
-document.getElementById("app").innerHTML =
-  "<p>Warta Jemaat akan tampil di sini</p>";
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
